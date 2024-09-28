@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "164915800547",
+    "project_id": "techweartry4",
+    "storage_bucket": "techweartry4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164915800547:android:dffe5cbe83f91c4afa98d6",
+        "android_client_info": {
+          "package_name": "com.example.techweartry4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABc9saYubzM__gaIQmL2ZuYxeQB-oxcqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
