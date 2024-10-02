@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:title="Profile">
+
+        <menu>
+
+            <item android:id="@+id/edit"
+                android:title="Edit User Info"/>
+            <item android:id="@+id/log_out"
+                android:title="Logout"/>
+
+        </menu>
+    </item>
+    <item android:id="@+id/nav_web_links"
+        android:title="Website Links"/>
+    <item android:id="@+id/nav_about_us"
+        android:title="About Us"/>
+    <item android:id="@+id/nav_fed_backs"
+        android:title="Feedback"/>
+    <item android:title="Conatct Us">
+
+        <menu>
+
+            <item android:id="@+id/mail_us"
+                android:title="Mail Us at"/>
+            <item android:id="@+id/help"
+                android:title="Help"/>
+
+        </menu>
+
+    </item>
+    <item android:id="@+id/socials"
+        android:title="Socials"/>
+
+
+
+</menu>
