@@ -3,15 +3,13 @@ package com.example.techweartry4
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 
 class FirstPage : AppCompatActivity() {
     lateinit var usebtn : Button
     lateinit var organizationbtn : Button
-    lateinit var helpbtn : Button
+    lateinit var firebaseAuth : FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
@@ -19,8 +17,7 @@ class FirstPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_first_page)
-
-        helpbtn = findViewById<Button>(R.id.helpbtn)
+        firebaseAuth = FirebaseAuth.getInstance()
         usebtn = findViewById<Button>(R.id.userbtn)
         organizationbtn = findViewById<Button>(R.id.organizationbtn)
 
@@ -30,6 +27,15 @@ class FirstPage : AppCompatActivity() {
         }
         usebtn.setOnClickListener{
             val intent: Intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (firebaseAuth.currentUser != null)
+        {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

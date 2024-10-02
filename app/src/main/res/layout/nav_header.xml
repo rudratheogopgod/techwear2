@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:background="@color/white"
+    android:backgroundTint="#0698F2">
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+         android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/twlogoremovebg"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name"
+        android:paddingTop="20dp"
+        android:layout_marginStart="15dp"
+        android:text="Rudra Agrawal"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textSize="16dp"
+        android:text="rudra@gmail.com"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"/>
+</LinearLayout>

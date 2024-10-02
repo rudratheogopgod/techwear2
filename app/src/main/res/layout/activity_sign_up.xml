@@ -5,10 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signup_screen"
+    android:background="@drawable/signupback"
     android:gravity="center"
     android:padding="20dp"
     tools:context=".SignUpActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Now!"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"/>
     <LinearLayout
         android:layout_marginTop="180dp"
         android:layout_width="match_parent"
@@ -62,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:padding="20dp"
-            android:backgroundTint="#FDC601"
+            android:backgroundTint="#60A8FC"
             android:text="Sign Up"
             android:textStyle="bold"
             android:textSize="18dp"
