@@ -46,7 +46,7 @@ class User_Details : AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
                         val user = snapshot.getValue(User::class.java)
-                        if (user != null && user.firstName != null && user.imgUri != null) {
+                        if (user != null && user.fullName != null && user.imgUri != null && user.firtsP != null && user.bloodGroup != null ) {
                             val intent = Intent(this@User_Details, MainActivity::class.java)
                             startActivity(intent)
                         }
@@ -65,12 +65,14 @@ class User_Details : AppCompatActivity() {
 
         binding.saveBtn.setOnClickListener{
 
-            val firstName = binding.etFirstName.text.toString()
-            val lastName = binding.etLastName.text.toString()
-            val bio = binding.etBio.text.toString()
+            val fullName = binding.etFirstName.text.toString()
+            val bloodGroup = binding.etLastName.text.toString()
+            val healthConditions = binding.etBio.text.toString()
+            val firstP = binding.etFirstP.text.toString()
+            val Sex = binding.etSex.text.toString()
 
-            val user = User(firstName,lastName,bio)
-            if (uId != null){
+            val user = User(fullName,bloodGroup,healthConditions,firstP,Sex)
+            if (uId != null && fullName.isNotEmpty() && bloodGroup.isNotEmpty() && healthConditions.isNotEmpty() && firstP.isNotEmpty() && Sex.isNotEmpty()){
 
                 databaseReference.child(uId).setValue(user).addOnCompleteListener{
 
@@ -86,6 +88,8 @@ class User_Details : AppCompatActivity() {
 
                 }
 
+            }else{
+                Toast.makeText(this@User_Details , "Empty Fields are not allowed", Toast.LENGTH_SHORT).show()
             }
 
         }
@@ -108,6 +112,8 @@ class User_Details : AppCompatActivity() {
                             .addOnCompleteListener { task ->
                                 if (task.isSuccessful) {
                                     Toast.makeText(this, "Profile picture uploaded successfully", Toast.LENGTH_SHORT).show()
+                                    val intent = Intent(this , MainActivity::class.java)
+                                    startActivity(intent)
                                 } else {
                                     Toast.makeText(this, "Failed to save profile picture URL", Toast.LENGTH_SHORT).show()
                                 }
